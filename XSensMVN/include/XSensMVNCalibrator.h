@@ -35,6 +35,9 @@ private:
     // Reference to the XmeControl object owned from the driver thread
     XmeControl& m_suitsConnector;
 
+    // String for saving calibration .mvn file
+    XsString m_suitCalibrationFilename;
+
     // Minimum quality required for applying calibration
     xsensmvn::CalibrationQuality m_minimumAccaptableQuality;
 
