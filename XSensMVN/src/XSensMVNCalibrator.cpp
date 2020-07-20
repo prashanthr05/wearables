@@ -294,9 +294,13 @@ namespace xsensmvn {
         m_calibrationInProgress = false;
 
         // TODO: Set the calibration file name with current time
-        std::cout << "[INFO] Saving Xsens calibration file" << std::endl;
-        //m_suitCalibrationFilename = "xsens_calibration";
-        m_suitsConnector.saveCurrentCalibration("xsens_calibration");
+
+        // String for saving calibration .mvn file
+        const XsString m_suitCalibrationFilename("xsens_calibration");
+        std::cout << "[INFO] Saving Xsens calibration file " << m_suitCalibrationFilename.toStdString() << ".mvn" << std::endl;
+
+        // Saving current calibration
+        m_suitsConnector.saveCurrentCalibration(m_suitCalibrationFilename);
 
         return true;
     }
