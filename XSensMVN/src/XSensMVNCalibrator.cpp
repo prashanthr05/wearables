@@ -297,7 +297,8 @@ namespace xsensmvn {
 
         // String for saving calibration .mvn file
         const XsString m_suitCalibrationFilename("xsens_calibration");
-        std::cout << "[INFO] Saving Xsens calibration file " << m_suitCalibrationFilename.toStdString() << ".mvn" << std::endl;
+        xsInfo << "Saving Xsens calibration file " << m_suitCalibrationFilename.toStdString()
+               << ".mvn";
 
         // Saving current calibration
         m_suitsConnector.saveCurrentCalibration(m_suitCalibrationFilename);
